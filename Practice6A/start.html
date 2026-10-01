@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 8 Tables</title>
+
+    <style type="text/css">
+
+	table, td, th {
+    border: 1px solid black;
+    width: 50%;
+	}
+
+	td.rams {
+    color: blue;
+	background-color: #ffffcc; }
+	
+	th {
+     border: 3px solid #334155;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #cbd5e1;
+    color: #1e293b;
+    font-size: 20px;
+}
+	td  { font-size: 20px;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    text-align: center;
+}	
+	caption {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #1e3a5f;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Exercise 8-1</h1>
+
+    <table>
+        <caption>Exercise 8-1</caption>
+
+        <tr>
+            <th>Album</th>
+            <th>Year</th>
+        </tr>
+
+        <tr>
+            <td>Rubber Soul</td>
+            <td>1965</td>
+        </tr>
+
+        <tr>
+            <td class="dark">Revolver</td>
+            <td class="dark">1966</td>
+        </tr>
+
+        <tr>
+            <td>Sgt. Pepper's</td>
+            <td>1967</td>
+        </tr>
+
+        <tr>
+            <td class="dark">The White Album</td>
+            <td class="dark">1968</td>
+        </tr>
+
+        <tr>
+            <td>Abbey Road</td>
+            <td>1969</td>
+        </tr>
+    </table>
+
+
+    <h1>Exercise 8-2</h1>
+
+    <table>
+        <caption>Exercise 8-2</caption>
+
+        <tr>
+            <th>7:00pm</th>
+            <th>7:30pm</th>
+            <th>8:00pm</th>
+        </tr>
+
+        <tr>
+            <td colspan="3">The Sunday Night Movie</td>
+        </tr>
+
+        <tr>
+            <td class="dark">
+                Perry<br>
+                Mason
+            </td>
+
+            <td class="dark">
+                Candid<br>
+                Camera
+            </td>
+
+            <td class="dark">
+                What's My<br>
+                Line?
+            </td>
+        </tr>
+
+        <tr>
+            <td>Bonanza</td>
+
+            <td colspan="2">
+                The Wackiest Ship in the Army
+            </td>
+        </tr>
+    </table>
+
+
+    <h1>Exercise 8-3</h1>
+
+    <table>
+        <caption>Exercise 8-3</caption>
+
+        <tr>
+            <td>Apples</td>
+
+            <td class="dark" rowspan="3">
+                Oranges
+            </td>
+
+            <td>Pears</td>
+        </tr>
+
+        <tr>
+            <td>Bananas</td>
+
+            <td class="dark" rowspan="2">
+                Pineapple
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lychees</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
