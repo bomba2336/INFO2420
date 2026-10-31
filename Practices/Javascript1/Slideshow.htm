@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<title>JavaScript Practice 1 - Slideshow</title>
+
+<style type="text/css">
+
+.flashclass {
+    /* CSS class for the image slideshow container */
+    height: 200px;
+    width: 200px;
+    border: 5px solid orange;
+    padding: 5px;
+    text-align: center;
+}
+
+.flashclass img {
+    border-width: 0;
+}
+
+</style>
+
+<script type="text/javascript" src="transitionshow.js"></script>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+var flashyshow = new flashyslideshow({
+
+    // Unique ID for this slideshow
+    wrapperid: "myslideshow",
+
+    // CSS class for the slideshow
+    wrapperclass: "flashclass",
+
+    // Images and captions
+    imagearray: [
+        ["Images/Thumbnails/CoupleSailingSm.jpg", "", "", "Newlyweds Sailing"],
+        ["Images/Thumbnails/PigSm.jpg", "", "", "Boy and His Pig"],
+        ["Images/Thumbnails/SaladSm.jpg", "", "", "Yummy Salad"],
+        ["Images/Thumbnails/StorkSm.jpg", "", "", "Stork at Sunset"]
+    ],
+
+    // Pause between slides (milliseconds)
+    pause: 2000,
+
+    // Transition duration (milliseconds)
+    transduration: 1000
+
+});
+
+</script>
+
+</body>
+</html>
