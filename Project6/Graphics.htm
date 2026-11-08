@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Native Cooking of Utah - Graphics</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        #thumbs, #image {
+            width: 700px;
+            max-width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            text-align: center;
+            margin: 0 auto;
+            color: #000;
+            background-color: #eee;
+            padding: 5px;
+        }
+
+        #thumbs {
+            margin-top: 10px;
+        }
+
+        #thumbs img {
+            border: 1px solid #000;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #image {
+            height: 400px;
+        }
+
+        #image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .instructions {
+            font-style: italic;
+        }
+
+        .background-preview {
+            margin-top: 30px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script>
+        // Images for the Print Page rollover
+        var PrintButton1 = new Image();
+        var PrintButton2 = new Image();
+
+        PrintButton1.src = "images/Print1.jpg";
+        PrintButton2.src = "images/Print2.jpg";
+
+        // Images for the Logo rollover
+        var logo1 = new Image();
+        var logo2 = new Image();
+
+        logo1.src = "images/Logo1.png";
+        logo2.src = "images/Logo2.png";
+
+        // Large images for the image swap
+        var imgArray = [
+            "Image1Lg.jpg",
+            "Image2Lg.jpg",
+            "Image3Lg.jpg",
+            "Image4Lg.jpg"
+        ];
+
+        // Titles for each cooking image
+        var titleArray = [
+            "Pasta Ingredients",
+            "Jello Cake",
+            "Grilled Vegetables",
+            "Chef Cooking"
+        ];
+
+        // Folder containing the large images
+        var imgPath = "images/fullsize/";
+
+        // Change large image and title on hover
+        function swapImage(imgID) {
+
+            var theImage = document.getElementById("theImage");
+            var textDiv = document.getElementById("bottomText");
+
+            var newImg = imgArray[imgID];
+            var textTitle = titleArray[imgID];
+
+            theImage.src = imgPath + newImg;
+            theImage.alt = textTitle;
+            textDiv.textContent = textTitle;
+        }
+
+        // Preload rollover and large images
+        function preloadImages() {
+
+            for (var i = 0; i < imgArray.length; i++) {
+                var tmpImg = new Image();
+                tmpImg.src = imgPath + imgArray[i];
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="preloadImages()">
+
+    <div>
+
+        <!-- Print Page Button Rollover -->
+        <div>
+
+            <a href="#"
+               onclick="return false;"
+               onmouseover="document.getElementById('print').src='images/Print2.jpg';"
+               onmouseout="document.getElementById('print').src='images/Print1.jpg';">
+
+                <img src="images/Print1.jpg"
+                     alt="Print Page"
+                     width="200"
+                     height="50"
+                     id="print">
+
+            </a>
+
+        </div>
+
+        <!-- Logo Rollover -->
+        <div id="logo">
+
+            <a href="#"
+               onclick="return false;"
+               onmouseover="document.getElementById('logoImage').src='images/Logo2.png';"
+               onmouseout="document.getElementById('logoImage').src='images/Logo1.png';">
+
+                <img src="images/Logo1.png"
+                     alt="RRK Logo"
+                     id="logoImage">
+
+            </a>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Cooking Image Thumbnails -->
+        <div id="thumbs">
+
+            <img src="images/thumbnails/Image1sm.jpg"
+                 alt="Pasta Ingredients"
+                 onmouseover="swapImage(0);">
+
+            <img src="images/thumbnails/Image2sm.jpg"
+                 alt="Jello Cake"
+                 onmouseover="swapImage(1);">
+
+            <img src="images/thumbnails/Image3sm.jpg"
+                 alt="Grilled Vegetables"
+                 onmouseover="swapImage(2);">
+
+            <img src="images/thumbnails/Image4sm.jpg"
+                 alt="Chef Cooking"
+                 onmouseover="swapImage(3);">
+
+        </div>
+
+        <!-- Large Image Swap Display -->
+        <div id="image">
+
+            <img id="theImage"
+                 src="images/fullsize/Image1Lg.jpg"
+                 alt="Pasta Ingredients">
+
+            <h3 id="bottomText">Pasta Ingredients</h3>
+
+        </div>
+
+        <!-- Two Column Background Image -->
+        <img src="images/2colback.jpg"
+             alt="Two-column background design"
+             width="900"
+             height="150"
+             class="background-preview">
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+</body>
+</html>
+
