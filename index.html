@@ -3,20 +3,112 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Bagley's Home Page</title>
 
     <style type="text/css">
 
-    @font-face {
-        font-family: 'OldeEnglish';
-        src: url('fonts/Olde English Regular.ttf') format('truetype');
-    }
+        @font-face {
+            font-family: 'OldeEnglish';
+            src: url('fonts/Olde English Regular.ttf') format('truetype');
+        }
 
-    h1 {
-        font-family: OldeEnglish, Geneva, serif;
-        font-size: 60px;
-        font-weight: normal;
-    }
+        body {
+            background-color: #141210;
+            color: #c5b9a1;
+            font-family: Georgia, 'Times New Roman', serif;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 30px;
+            line-height: 1.8;
+        }
+
+        header {
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-family: OldeEnglish, Georgia, serif;
+            font-size: 60px;
+            font-weight: normal;
+            line-height: 1.2;
+            color: #d2c3a3;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: OldeEnglish, Georgia, serif;
+            font-size: 34px;
+            font-weight: normal;
+            color: #b78a79;
+            margin: 20px 0;
+        }
+
+        .date {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #95846b;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #95846b;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px 30px;
+        }
+
+        a {
+            color: #c5b9a1;
+            text-decoration-color: #615440;
+            text-underline-offset: 4px;
+        }
+
+        a:hover {
+            color: #c4776b;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #514538;
+            margin: 30px 0;
+        }
+
+        footer {
+            color: #95846b;
+            font-size: 14px;
+            font-style: italic;
+            padding-bottom: 30px;
+        }
+
+        ::selection {
+            background-color: #632822;
+            color: #e5d8bc;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .links {
+                grid-template-columns: 1fr;
+            }
+
+        }
 
     </style>
 
@@ -24,97 +116,113 @@
 
 <body>
 
-<h1>Home Page for Aaron Bagley</h1>
+<header>
+
+    <p class="date">ANNO DOMINI MCCCXLVIII</p>
+
+    <h1>Aaron Bagley's Chronicle</h1>
+
+    <p class="subtitle">INFO 2420 — Web Development</p>
+
+</header>
 
 <hr>
 
-<h2>Projects</h2>
+<section>
 
-<a href="Project1/project1.htm">Project 1 - Web Site Critique</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+    <h2>Projects</h2>
 
-<a href="Project2/AboutUs.html">Project 2 (About Us)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+    <div class="links">
 
-<a href="Project2/Tributes.html">Project 2 (Tributes)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project1/project1.htm">Project 1 - Web Site Critique</a>
 
-<a href="Project3/AboutUs.html">Project 3 (About Us)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project2/AboutUs.html">Project 2 (About Us)</a>
 
-<a href="Project3/Tributes.html">Project 3 (Tributes)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project2/Tributes.html">Project 2 (Tributes)</a>
 
-<a href="Project4/AboutUs.html">Project 4 (About Us)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project3/AboutUs.html">Project 3 (About Us)</a>
 
-<a href="Project4/Tributes.html">Project 4 (Tributes)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project3/Tributes.html">Project 3 (Tributes)</a>
 
-<a href="Project5/Graphics.html">Project 5 (Graphics)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project4/AboutUs.html">Project 4 (About Us)</a>
 
-<a href="Project5/index.html">Project 5 (Image Map)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project4/Tributes.html">Project 4 (Tributes)</a>
 
-<a href="Project5/SiteDesign.html">Project 5 (Site Design)</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Project5/Graphics.html">Project 5 (Graphics)</a>
 
-<a href="Project6/Graphics.htm">Project 6 - JavaScript and Graphics</a>
+        <a href="Project5/index.html">Project 5 (Image Map)</a>
+
+        <a href="Project5/SiteDesign.html">Project 5 (Site Design)</a>
+
+        <a href="Project6/Graphics.htm">Project 6 - JavaScript and Graphics</a>
+
+    </div>
+
+</section>
 
 <hr>
 
-<h2>Practice Assignments</h2>
+<section>
 
-<a href="Practice1A/">Practice 1A</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+    <h2>Practice Assignments</h2>
 
-<a href="Practice1B/FAQ.html">Practice 1B</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+    <div class="links">
 
-<a href="Practice2/cactus.html">Practice 2</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice1A/">Practice 1A</a>
 
-<a href="Practice3/index.html">Practice 3</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice1B/FAQ.html">Practice 1B</a>
 
-<a href="Practice3B/Chap6/glossary.html">Practice 3B</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice2/cactus.html">Practice 2</a>
 
-<a href="Practice4A/index.html">Practice 4A</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice3/index.html">Practice 3</a>
 
-<a href="Practice4B/HTML4BFiles/CSS3Fonts/CSS3Fonts.html">Practice 4B</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice3B/Chap6/glossary.html">Practice 3B</a>
 
-<a href="Practice5/HTML%205/index.html">Practice 5</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice4A/index.html">Practice 4A</a>
 
-<a href="Practice5B/Chap13/bistro.html">Practice 5B</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice4B/HTML4BFiles/CSS3Fonts/CSS3Fonts.html">Practice 4B</a>
 
-<a href="Practice6A/start.html">Practice 6A</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice5/HTML%205/index.html">Practice 5</a>
 
-<a href="Practice6B/table.html">Practice 6B</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice5B/Chap13/bistro.html">Practice 5B</a>
 
-<a href="Practices/work-with-html-text/work-with-html-text/index.html">DWPractice 1</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice6A/start.html">Practice 6A</a>
 
-<a href="Project7Practice/Project7Practice/Index.htm">Project 7 Practice</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="Practice6B/table.html">Practice 6B</a>
 
-<a href="Practices/Imagemap/ImageExamples.html">Imagemap Practice</a>
+        <a href="Practices/work-with-html-text/work-with-html-text/index.html">DWPractice 1</a>
+
+        <a href="Project7Practice/Project7Practice/Index.htm">Project 7 Practice</a>
+
+        <a href="Practices/Imagemap/ImageExamples.html">Imagemap Practice</a>
+
+    </div>
+
+</section>
 
 <hr>
 
-<h2>Book Assignments</h2>
+<section>
 
-<a href="Exercise16-1/bakery_ch16.html">Exercise 16-1 - Flexbox Navigation</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
+    <h2>Book Assignments</h2>
 
-<a href="Exercise16-2%20%26%203/Exercise16-2%20%26%203/flex-menu.html">Exercises 16-2 and 16-3 - Flexbox Menu</a>
+    <div class="links">
+
+        <a href="Exercise16-1/bakery_ch16.html">Exercise 16-1 - Flexbox Navigation</a>
+
+        <a href="Exercise16-2%20%26%203/Exercise16-2%20%26%203/flex-menu.html">Exercises 16-2 and 16-3 - Flexbox Menu</a>
+
+    </div>
+
+</section>
+
+<hr>
+
+<footer>
+
+    <p>Memento mori.</p>
+
+</footer>
 
 </body>
 
